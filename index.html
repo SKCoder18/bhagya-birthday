@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Bhagya Shree ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #2b5876, #4e4376);
+  color: #ffffff;
+  text-align: center;
+}
+
+.container {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2.6em;
+  margin-bottom: 10px;
+}
+
+.sub {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+.message {
+  background: rgba(255,255,255,0.15);
+  padding: 30px;
+  border-radius: 20px;
+  margin: 40px auto;
+  line-height: 1.8;
+  font-size: 1.05em;
+}
+
+#countdown {
+  margin: 25px 0;
+  font-size: 1.4em;
+  color: #ffdede;
+}
+
+button {
+  margin-top: 30px;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  background: #ffffff;
+  color: #4e4376;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ffdede;
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>🎂 Happy Birthday Bhagya Shree ❤️</h1>
+  <div class="sub">From my heart to yours</div>
+
+  <div class="message">
+    <p>
+      Dear <b>Bhagya Shree</b> 💖,<br><br>
+
+      I know we went through a difficult phase…  
+      I know I hurt you, and for that I’m truly sorry 🕊️  
+      The distance, the silence, and everything in between  
+      made me realize how important you are to me.<br><br>
+
+      On your birthday, I don’t want excuses.  
+      I just want to give you honesty, love,  
+      and the part of my heart that still chooses you every day ❤️<br><br>
+
+      You mean more to me than my ego,  
+      more than my anger,  
+      more than my pride.<br><br>
+
+      If there’s one wish I have today,  
+      it’s not just to see you smile…  
+      but to be the reason behind it again 🌹<br><br>
+
+      Happy Birthday, Bhagya Shree 🎂💫<br>
+      Always yours,<br>
+      <b>Sai Kumar</b> ❤️
+    </p>
+  </div>
+
+  <div id="countdown"></div>
+
+  <button onclick="forgive()">
+    Click if you forgive me 🤍
+  </button>
+
+  <footer>
+    09 January 2005 ✨
+  </footer>
+</div>
+
+<audio autoplay loop>
+  <source src="music.mp3" type="audio/mp3">
+</audio>
+
+<script>
+const birthday = new Date("2005-01-09T00:00:00").setFullYear(new Date().getFullYear());
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  let target = birthday;
+
+  if (now > target) {
+    target = new Date("2005-01-09T00:00:00").setFullYear(new Date().getFullYear() + 1);
+  }
+
+  const diff = target - now;
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const mins = Math.floor((diff / (1000 * 60)) % 60);
+
+  document.getElementById("countdown").innerHTML =
+    `⏳ ${days} Days ${hours} Hours ${mins} Minutes left until your day 💖`;
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+function forgive() {
+  alert("Thank you for reading till the end 🤍\nI’m still here, still choosing you ❤️");
+}
+</script>
+
+</body>
+</html>
